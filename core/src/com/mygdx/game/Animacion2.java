@@ -12,14 +12,15 @@ public class Animacion2 {
         this.y = y;
         this.x = x;
 
-        imagen=new Texture("img2.png");
+        imagen=new Texture(Gdx.files.internal("img2.png"));
         TexttureRegion temporal[][]=TextuteRegion.split(imagen,imagen.getWidth()/3,imagen.getHeight()/4);
 
-        regionMovimiento=new TextureRegion[3];
+        regionMovimiento=new TextureRegion[12];
+        int max=0;
         for(int i=0;i<4;i++){
             for(int e=0;e<3;e++){
-                regionMovimiento[i]=temporal[i][e];
-
+                regionMovimiento[max]=temporal[i][e];
+                max++;
             }
 
         }

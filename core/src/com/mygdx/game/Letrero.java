@@ -13,13 +13,11 @@ public class Letrero {
         this.y = y;
         this.x = x;
 
-        imagen=new Texture("GAME_LAND.png");
+        imagen=new Texture(Ggdx.files.internal("GAME_LAND.png"));
         TexttureRegion temporal[][]=TextuteRegion.split(imagen,imagen.getWidth()/3,imagen.getHeight());
 
         regionMovimiento=new TextureRegion[3];
-        for(int i=0;i<3;i++){
-            regionMovimiento[i]=temporal[0][i];
-        }
+        for(int i=0;i<3;i++) regionMovimiento[i]=temporal[0][i];
         animation=new Animation(1/2f,regionMovimiento);
         tiempo=0f;
     }
