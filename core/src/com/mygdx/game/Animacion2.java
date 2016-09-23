@@ -7,7 +7,6 @@ public class Animacion2 {
     private TextureRegion regionMovimiento[];
     private Texture imagen;
     private TextureRegion frameActual;
-    pri
     public Animacion2(int y, int x) {
 
         this.y = y;

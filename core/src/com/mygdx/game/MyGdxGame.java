@@ -17,20 +17,25 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
 		i=new Insecto(0,0);
-		anim2= new Animacion2(200,200);
+		anim2= new Animacion2(200,400);
 
 
 	}
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
+		Gdx.gl.glClearColor(1, 1, 1, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		i.render(batch);
+
 		anim2.render(batch);
 		batch.draw(img, 0, 0);
 		batch.end();
+		if(Gdx.input.isTouched()){
+			anim2.x++;
+
+		}
 	}
 	
 	@Override
